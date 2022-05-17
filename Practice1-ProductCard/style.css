@@ -1,0 +1,192 @@
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, right top, from(#4daf54), to(#3d8880));
+  background-image: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.card {
+  width: 320px;
+  height: 400px;
+  margin: 120px auto;
+  background: #272d40;
+  padding: 16px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+}
+
+.card__heart, .card__cart {
+  font-size: 24px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card__cart {
+  left: unset;
+  right: 16px;
+}
+
+.card__img {
+  width: 90%;
+  margin-top: 28px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__title, .card__price {
+  color: #4daf54;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 550;
+  text-align: center;
+  padding: 5px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card__price {
+  color: white;
+}
+
+.card__size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 150px;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card__size h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 6px;
+}
+
+.card__size span {
+  font-weight: 500;
+  padding: 7px 11px;
+  background: #dadada;
+  border-radius: 3px;
+  color: #272d40;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.card__color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.card__color h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 6px;
+}
+
+.card__color span {
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.card__color-red {
+  background-color: red;
+}
+
+.card__color-green {
+  background-color: green;
+}
+
+.card__color-black {
+  background-color: black;
+}
+
+.card__action {
+  cursor: pointer;
+}
+
+.card__action button {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background: #4daf54;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-right: 5px;
+}
+
+.card__action button:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.card__size, .card__color, .card__action {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card:hover .card__img {
+  -webkit-transform: translateY(-90px) rotate(-20deg);
+          transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card__title {
+  -webkit-transform: translateY(-80px) translateX(-56px);
+          transform: translateY(-80px) translateX(-56px);
+}
+
+.card:hover .card__price {
+  -webkit-transform: translateY(-80px) translateX(-132px);
+          transform: translateY(-80px) translateX(-132px);
+}
+
+.card:hover .card__size,
+.card:hover .card__color,
+.card:hover .card__action {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card:hover .card__size {
+  margin-top: -50px;
+}
+/*# sourceMappingURL=style.css.map */

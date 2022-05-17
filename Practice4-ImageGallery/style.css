@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+height: 100vh;
+background-color: #dadada;
+display: flex;
+}
+
+.app {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.img {
+    width: 264px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: none;
+}
+
+.img:hover img{
+    cursor: pointer;
+    transition: 0.4s;
+    transform: scale(1.2);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.4s;
+}
+
+/* Gallery */
+
+.gallery {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.4s;
+}
+
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 100px;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    font-size: 100px;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-container {
+    width: 956px;
+    height: 438px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery-container img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.gallery-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}

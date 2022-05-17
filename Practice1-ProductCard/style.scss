@@ -1,0 +1,159 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+//Mixin
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.card {
+    @include size(320px, 400px);
+    margin: 120px auto;
+    background: #272d40;
+    padding: 16px;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    &__heart,
+    &__cart {
+        font-size: 24px;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    &__cart {
+        left: unset;
+        right: 16px;
+    }
+    &__img {
+        width: 90%;
+        margin-top: 28px;
+        transition: 0.5s;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title,
+    &__price {
+        color: #4daf54;
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        font-weight: 550;
+        text-align: center;
+        padding: 5px 0;
+        transition: 0.5s;
+    }
+    &__price {
+        color: white;
+    }
+    &__size {
+        display: flex;
+        align-items: center;
+        margin-top: 150px;
+        margin-bottom: 30px;
+        font-family: "Poppins", sans-serif;
+        & h3 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-right: 6px;
+        }
+        & span {
+            font-weight: 500;
+            padding: 7px 11px;
+            background: #dadada;
+            border-radius: 3px;
+            color: #272d40;
+            margin: 0 6px;
+            cursor: pointer;
+        }
+    }
+    &__color {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        & h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            margin-right: 6px;
+        }
+        & span {
+            padding: 10px;
+            border-radius: 50%;
+            margin: 0 6px;
+            cursor: pointer;
+        }
+        &-red {
+            background-color: red;
+        }
+        &-green {
+            background-color: green;
+        }
+        &-black {
+            background-color: black;
+        }
+    }
+    &__action {
+        cursor: pointer;
+        & button {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            background: #4daf54;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.5s;
+            margin-right: 5px;
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+    }
+    &__size,
+    &__color,
+    &__action {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    &:hover {
+        & .card__img {
+            transform: translateY(-90px) rotate(-20deg);
+        }
+        & .card__title {
+            transform: translateY(-80px) translateX(-56px);
+        }
+        & .card__price {
+            transform: translateY(-80px) translateX(-132px);
+        }
+        & .card__size,
+        .card__color,
+        .card__action {
+            visibility: visible;
+            opacity: 1;
+        }
+        & .card__size {
+            margin-top: -50px;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,100;1,200;1,300;1,500&family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(45deg, #4158d0 0%, #c850c0 50%, #ffcc70 100%);
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: 350;
+  text-align: center;
+  line-height: 63px;
+  width: 189px;
+  height: 63px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: modalShow linear 0.3s;
+}
+
+.modal__heading {
+  width: 100%;
+  height: 50px;
+  background: #f2726a;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 350;
+  color: #fff;
+}
+
+.modal__heading-icon {
+  font-size: 26px;
+  margin-top: 5px;
+}
+
+.modal__heading-icon i:hover {
+  cursor: pointer;
+}
+
+.modal__container {
+  width: 100%;
+  height: 86px;
+  padding: 15px;
+  background: #fff;
+}
+
+.modal__container-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f2726a;
+}
+
+.modal__container-text {
+  font-weight: 300;
+}
+
+.modal__close {
+  width: 100%;
+  height:64px;
+  background: #fff;
+  padding: 15px;
+}
+
+.modal__close button:hover {
+  cursor: pointer;
+}
+
+.modal__close button {
+  width: 74px;
+  height: 34px;
+  border: none;
+  background: #f2726a;
+  border-radius: 3px;
+  color: #fff;
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes modalShow {
+  
+  from {
+    top: 0;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
